@@ -16,6 +16,9 @@
         @endif
     </div>
     <div>
+        <div>
+             <a href="{{ route('products.create') }}">Create Product</a>
+        </div>
         <table border="1">
             <thead>
                 <tr>
