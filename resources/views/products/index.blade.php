@@ -25,6 +25,7 @@
                     <th>Description</th>
                     <th>Price</th>
                     <th>Edit</th>
+                    <th>Delete</th>
 
                 </tr>
             </thead>
@@ -39,6 +40,12 @@
                         <td>
                             <a href="{{ route('products.edit', ['product' => $product]) }}">Edit</a>
                         </td>
+                        <td>
+                            <form action="{{ route('products.destroy', ['product' => $product]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
                     </tr>
                 @endforeach
             </tbody>
