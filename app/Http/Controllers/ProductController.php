@@ -22,7 +22,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'quantity' => 'required|integer|min:0',
             'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
+            'price' => 'required|decimal:0,2',
         ]);
 
         // Create a new product using the validated data
